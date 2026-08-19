@@ -105,7 +105,7 @@ runs:
       rm -f "slsactl_${VERSION#v}_checksums.txt" "slsactl_${VERSION#v}_checksums.txt.sigstore.json" "${FILE}" slsactl
     env:
       VERSION: ${{ steps.version.outputs.version }}
-      REPO: github.com/rancherlabs/slsactl
+      REPO: github.com/bk201-org/slsactl
 
   - name: Print version
     shell: bash
