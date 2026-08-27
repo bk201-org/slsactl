@@ -141,6 +141,10 @@ func TestCertificateIdentity(t *testing.T) {
 			want:  "^https://github.com/harvester/os2/.github/workflows/factory.yml@refs/(heads/sle-micro|tags/prime-.*)$",
 		},
 		{
+			image: "harvester/harvester-kernel-module-devel:prime-v1.0.0",
+			want:  "^https://github.com/harvester/os2/.github/workflows/factory.yml@refs/(heads/sle-micro|tags/prime-.*)$",
+		},
+		{
 			image: "harvester/harvester-pcidevices:prime-v1.0.0",
 			want:  "^https://github.com/harvester/pcidevices/.github/workflows/template-build.yml@refs/(heads/master|tags/prime-.*)$",
 		},

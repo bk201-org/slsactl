@@ -72,6 +72,7 @@ var (
 		"harvester/harvester-node-manager-webhook":            "harvester/node-manager",
 		"harvester/harvester-nvidia-driver-toolkit":           "harvester/os2",
 		"harvester/harvester-os":                              "harvester/os2",
+		"harvester/harvester-kernel-module-devel":             "harvester/os2",
 		"harvester/harvester-pcidevices":                      "harvester/pcidevices",
 		"harvester/harvester-seeder":                          "harvester/seeder",
 		"harvester/harvester-vm-import-controller":            "harvester/vm-import-controller",
