@@ -235,7 +235,7 @@ func TestHarvesterCertificateIdentities(t *testing.T) {
 	t.Parallel()
 
 	const (
-		csiLVMIdentity             = "^https://github.com/harvester/csi-driver-lvm/.github/workflows/factory.yml@refs/(heads/main|tags/prime-.*)$"
+		csiLVMIdentity             = "^https://github.com/bk201-org/csi-driver-lvm/.github/workflows/factory.yml@refs/(heads/test-ci|tags/prime-.*)$"
 		eventrouterIdentity        = "^https://github.com/harvester/eventrouter/.github/workflows/factory.yml@refs/(heads/master|tags/prime-.*)$"
 		forkliftIdentity           = "^https://github.com/harvester/forklift-packaging/.github/workflows/template-build.yml@refs/(heads/(main|release/v.*)|tags/v.*)$"
 		harvesterIdentity          = "^https://github.com/harvester/harvester/.github/workflows/build-factory.yml@refs/(heads/(master|release-.*|v.*)|tags/v.*)$"
@@ -257,9 +257,9 @@ func TestHarvesterCertificateIdentities(t *testing.T) {
 		{image: "harvester/harvester-node-manager:prime-v1.0.0", want: nodeManagerIdentity},
 		{image: "harvester/harvester-node-manager-webhook:prime-v1.0.0", want: nodeManagerIdentity},
 		{image: "harvester/harvester-mcp-server:v1.0.0", want: mcpServerIdentity},
-		{image: "harvester/harvester-lvm-csi-plugin:prime-v1.0.0", want: csiLVMIdentity},
-		{image: "harvester/harvester-lvm-provisioner:prime-v1.0.0", want: csiLVMIdentity},
-		{image: "harvester/harvester-lvm-csi-driver-webhook:prime-v1.0.0", want: csiLVMIdentity},
+		{image: "bk201z/harvester-lvm-csi-plugin:prime-v1.0.0", want: csiLVMIdentity},
+		{image: "bk201z/harvester-lvm-provisioner:prime-v1.0.0", want: csiLVMIdentity},
+		{image: "bk201z/harvester-lvm-csi-driver-webhook:prime-v1.0.0", want: csiLVMIdentity},
 		{image: "harvester/support-bundle-kit:v1.0.0", want: supportBundleKitIdentity},
 		{image: "harvester/harvester-kubeovn-operator:prime-v1.0.0", want: kubeovnIdentity},
 		{image: "harvester/harvester-eventrouter:prime-v1.0.0", want: eventrouterIdentity},
