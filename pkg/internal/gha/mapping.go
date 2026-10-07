@@ -102,6 +102,10 @@ var (
 		"harvester/harvester-webhook":                         "harvester/harvester",
 		"harvester/harvester-upgrade":                         "harvester/harvester",
 		"harvester/harvester-cluster-repo":                    "harvester/harvester",
+		"bk201z/harvester":                                    "bk201-org/harvester",
+		"bk201z/harvester-webhook":                            "bk201-org/harvester",
+		"bk201z/harvester-upgrade":                            "bk201-org/harvester",
+		"bk201z/harvester-cluster-repo":                       "bk201-org/harvester",
 	}
 
 	mutableRepo = map[string]bool{
@@ -161,6 +165,7 @@ var (
 		"harvester/seeder":                                                "^https://github.com/harvester/seeder/.github/workflows/template-build.yml@refs/(heads/(main|v.*)|tags/prime-.*)$",
 		"harvester/vm-import-controller":                                  "^https://github.com/harvester/vm-import-controller/.github/workflows/template-build.yml@refs/(heads/(main|v.*)|tags/prime-.*)$",
 		"harvester/harvester":                                             "^https://github.com/harvester/harvester/.github/workflows/build-prime.yml@refs/(heads/(prime-)?v.*|tags/(prime-)?v.*)$",
+		"bk201-org/harvester":                                             "^https://github.com/bk201-org/harvester-p/.github/workflows/build-prime.yml@refs/(heads/(prime-)?v.*|tags/(prime-)?v.*)$",
 	}
 
 	// imageSuffixes holds a mapping between image name and the ref suffixes

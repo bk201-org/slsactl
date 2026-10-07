@@ -239,6 +239,7 @@ func TestHarvesterCertificateIdentities(t *testing.T) {
 		eventrouterIdentity        = "^https://github.com/harvester/eventrouter/.github/workflows/factory.yml@refs/(heads/(master|v.*)|tags/prime-.*)$"
 		forkliftIdentity           = "^https://github.com/harvester/forklift-packaging/.github/workflows/template-build.yml@refs/(heads/(main|release/v.*|v.*)|tags/v.*)$"
 		harvesterIdentity          = "^https://github.com/harvester/harvester/.github/workflows/build-prime.yml@refs/(heads/(prime-)?v.*|tags/(prime-)?v.*)$"
+		bk201HarvesterIdentity     = "^https://github.com/bk201-org/harvester-p/.github/workflows/build-prime.yml@refs/(heads/(prime-)?v.*|tags/(prime-)?v.*)$"
 		kubeovnIdentity            = "^https://github.com/harvester/kubeovn-operator/.github/workflows/template-build.yml@refs/(heads/(main|v.*|release-.*)|tags/prime-.*)$"
 		loadBalancerIdentity       = "^https://github.com/harvester/load-balancer-harvester/.github/workflows/template-build.yml@refs/(heads/(master|v.*)|tags/prime-.*)$"
 		mcpServerIdentity          = "^https://github.com/harvester/harvester-mcp-server/.github/workflows/release.yml@refs/(heads/(main|v.*)|tags/v.*)$"
@@ -292,6 +293,10 @@ func TestHarvesterCertificateIdentities(t *testing.T) {
 		{image: "harvester/harvester-webhook:v1.8.0", want: harvesterIdentity},
 		{image: "harvester/harvester-upgrade:v1.8.0", want: harvesterIdentity},
 		{image: "harvester/harvester-cluster-repo:v1.8.0", want: harvesterIdentity},
+		{image: "bk201z/harvester:v1.8.0", want: bk201HarvesterIdentity},
+		{image: "bk201z/harvester-webhook:v1.8.0", want: bk201HarvesterIdentity},
+		{image: "bk201z/harvester-upgrade:v1.8.0", want: bk201HarvesterIdentity},
+		{image: "bk201z/harvester-cluster-repo:v1.8.0", want: bk201HarvesterIdentity},
 	}
 
 	testCertificateIdentities(t, tests)
